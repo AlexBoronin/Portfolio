@@ -1,18 +1,17 @@
 'use strict';
 
 $(document).ready(function () {
-    const smooth = ['-100%', '-200%', '-300%', '-400%'];
     const contentItems = $('.content__items');
     const about = $('#me');
     const skills = $('#skills-item');
     const works = $('#works-item');
     const party = $('#party-item');
     const price = $('#price-item');
-    // const btnPrev = $('#prev');
-    // const btnNext = $('#next');
     const btnPrev = document.getElementById('prev');
     const btnNext = document.getElementById('next');
+    const body = document.getElementsByClassName('body');
     let count = 0;
+
     /* выбор пункта меню, изменение его стилей */
     /*toDo - добавить скролл к этому элементу*/
     const menuItem = $('.nav__item');
@@ -26,38 +25,38 @@ $(document).ready(function () {
         el.currentTarget.classList.add('active');
         switch (el.currentTarget.id) {
             case 'me':
-                // contentItems.addClass('transity');
                 contentItems.css('transform', 'translateX(0)');
                 btnPrev.classList.add('disabled');
                 btnNext.classList.remove('disabled');
+                body.css('background', 'url("../images/back_1.jpg") no-repeat center');
                 count = 0;
                 break
             case 'skills-item':
-                // contentItems.addClass('transity');
                 contentItems.css('transform', 'translateX(-100%)');
                 btnPrev.classList.remove('disabled');
                 btnNext.classList.remove('disabled');
+                body.css('background', 'url("../images/back_2.jpg") no-repeat center');
                 count = 1;
                 break
             case 'works-item':
-                // contentItems.addClass('transity');
                 contentItems.css('transform', 'translateX(-200%)');
                 btnPrev.classList.remove('disabled');
                 btnNext.classList.remove('disabled');
+                body.css('background', 'url("../images/back_3.jpg") no-repeat center');
                 count = 2;
                 break
             case 'party-item':
-                // contentItems.addClass('transity');
                 contentItems.css('transform', 'translateX(-300%)');
                 btnPrev.classList.remove('disabled');
                 btnNext.classList.remove('disabled');
+                body.css('background', 'url("../images/back_4.jpg") no-repeat center');
                 count = 3;
                 break
             case 'price-item':
-                // contentItems.addCass('transity');
                 contentItems.css('transform', 'translateX(-400%)');
                 btnNext.classList.add('disabled');
                 btnPrev.classList.remove('disabled');
+                body.css('background', 'url("../images/back_5.jpg") no-repeat center');
                 count = 4;
                 break
         }
@@ -81,19 +80,23 @@ $(document).ready(function () {
                 contentItems.css('transform', 'translateX(-100%)');
                 btnPrev.classList.remove('disabled');
                 skills.addClass('active');
+                // setBg(2);
                 break
             case 2:
                 contentItems.css('transform', 'translateX(-200%)');
                 works.addClass('active');
+                // setBg(3);
                 break
             case 3:
                 contentItems.css('transform', 'translateX(-300%)');
                 party.addClass('active');
+                // setBg(4);
                 break
             case 4:
                 contentItems.css('transform', 'translateX(-400%)');
                 price.addClass('active');
                 btnNext.classList.add('disabled');
+                // setBg(5);
                 break
         }
         console.log(count)
@@ -109,22 +112,23 @@ $(document).ready(function () {
                 contentItems.css('transform', 'translateX(-300%)');
                 btnNext.classList.remove('disabled');
                 party.addClass('active');
+                // setBg(4);
                 break
             case 2:
-                // contentItems.addClass('transity');
                 contentItems.css('transform', 'translateX(-200%)');
                 works.addClass('active');
+                // setBg(3);
                 break
             case 1:
-                // contentItems.addClass('transity');
                 contentItems.css('transform', 'translateX(-100%)');
                 skills.addClass('active');
+                // setBg(2)
                 break
             case 0:
-                // contentItems.addClass('transity');
                 contentItems.css('transform', 'translateX(0)');
                 btnPrev.classList.add('disabled');
                 about.addClass('active');
+                // setBg(1)
                 break
         }
         console.log(count)
@@ -132,7 +136,7 @@ $(document).ready(function () {
     btnNext.addEventListener('click', moveNext);
     btnPrev.addEventListener('click', movePrev);
 
-    /* анимация самопрезентации + смена языка*/
+    /* анимация самопрезентации + смена языка - ПОКА НЕ ПОЛУЧИЛОСЬ _ НАДО ДУМАТЬ*/
     // const typText = [['креативен', 'амбициозен', 'мотивирован', 'frontend-разработчик'],
     //     ['creative', 'ambitious', 'motivated', 'frontend developer']];
     //
@@ -185,7 +189,8 @@ $(document).ready(function () {
             '- Вы можете запросто обратиться ко мне, я с удовольствием окажу Вам квалифицированную помощь в пределах своих знаний и умений.',
             'Заинтересован в сотрудничестве со стартап-командами. С радостью рассмотрю предложения в данном направлении.',
             'Открыт к обсуждению любых производственных и коммерческих вопросов.', 'Гарантирую порядочное и надежное партнерство, ' +
-        'а также высокий уровень и качество выполненной работы.', 'Прайс-лист', '2023 © Все права защищены'],
+        'а также высокий уровень и качество выполненной работы.', 'Прайс-лист', '1 час работы ~ 10$', 'Элемент / задание',
+            'Срок исполнения', 'Стоимость', '2023 © Все права защищены'],
         ['beautiful page', 'successful start of your business', 'About me', 'Abilities and skills', 'Completed projects',
             'Clients and partners', 'Acceptable price', 'I\'m available', 'Project search...', 'Aliaksei Baronin', 'frontend developer / 42 years old, Belarus',
             'Hello!', 'Let\'s get acquainted! I\'m Aleksey, a beginner frontend developer.',
@@ -201,16 +206,17 @@ $(document).ready(function () {
             '- You can easily contact me, I will be happy to provide you with qualified assistance within the limits of my knowledge and skills.',
             'I\'m interested in collaborating with start-up teams. I will gladly consider proposals in this direction.',
             'I am open to discussion of any production and commercial issues.', 'I guarantee a decent and reliable partnership,' +
-        'as well as the high level and quality of the work performed.', 'Price list', '2023 © All rights reserved']
+        'as well as the high level and quality of the work performed.', 'Price list', '1 hour of work ~ 10$', 'Element / task',
+            'Due date', 'Cost', '2023 © All rights reserved']
     ]
 
     const lang = $('.lang');
     lang.click(function (el) {
-            changeLang($(this).text());
+        changeLang($(this).text());
     });
 
-    function changeLang(str){
-        if(str === 'ru'){
+    function changeLang(str) {
+        if (str === 'ru') {
             // changeTyped('ru');
             lang.eq(1).removeClass('lang-active');
             lang.eq(0).addClass('lang-active');
@@ -221,7 +227,7 @@ $(document).ready(function () {
                 placeForLang.eq(i).text(`${allText[0][i]}`);
             }
         }
-        if(str === 'en'){
+        if (str === 'en') {
             // changeTyped('en');
             lang.eq(0).removeClass('lang-active');
             lang.eq(1).addClass('lang-active');
@@ -233,4 +239,14 @@ $(document).ready(function () {
             }
         }
     }
+
+    /*ToDo смену background body */
+    // function setBg(n) {
+    //     const img = new Image();
+    //     // img.src = "https://raw.githubusercontent.com/AlexBoronin/Portfolio/main/assets/images/back_" + n + ".jpg";
+    //     img.src = "../images/back_" + n + ".jpg";
+    //     img.onload = () => {
+    //         document.body.style.background = "url(" + img.src + ") no-repeat center";
+    //     };
+    // }
 });
