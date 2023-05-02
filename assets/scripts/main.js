@@ -13,7 +13,6 @@ $(document).ready(function () {
     let count = 0;
 
     /* выбор пункта меню, изменение его стилей */
-    /*toDo - добавить скролл к этому элементу*/
     const menuItem = $('.nav__item');
 
     menuItem.click((el) => {
@@ -136,7 +135,7 @@ $(document).ready(function () {
     btnNext.addEventListener('click', moveNext);
     btnPrev.addEventListener('click', movePrev);
 
-    /* анимация самопрезентации + смена языка - ПОКА НЕ ПОЛУЧИЛОСЬ _ НАДО ДУМАТЬ*/
+    /* анимация самопрезентации + ToDo смена языка - ПОКА НЕ ПОЛУЧИЛОСЬ _ НАДО ДУМАТЬ*/
     // const typText = [['креативен', 'амбициозен', 'мотивирован', 'frontend-разработчик'],
     //     ['creative', 'ambitious', 'motivated', 'frontend developer']];
     //
@@ -171,12 +170,13 @@ $(document).ready(function () {
 
 
     /* Смена языка */
+    const searchInput = $('#searchInpt');
     const placeForLang = $('.change');
     const btnMore = $('.skills__more');
     const allText = [
         ['красивая страница', 'успешный старт вашего бизнеса', 'О себе', 'Умения и навыки', 'Завершенные проекты',
-            'Клиентам и партнерам', 'Приемлемый прайс', 'я доступен', 'Поиск проекта ...', 'Алексей Боронин',
-            'frontend-разработчик / 42 года, Беларусь', 'Привет!', 'Будем знакомы! Я Алексей — начинающий frontend-разработчик.',
+            'Клиентам и партнерам', 'Приемлемый прайс', 'я доступен', 'Алексей Боронин',
+            'frontend-разработчик / 42 года, Беларусь', 'Я', 'Привет!', 'Будем знакомы! Я Алексей — начинающий frontend-разработчик.',
             'Web-разработка довольно непростая штучка, как может показаться на первый взгляд - вроде как картинка туда, ' +
             'текст сюда, тут кнопочка...', 'Отнюдь... это совсем не так. Тем не менее WEB очень интересен и многогранен.',
             'Да, сейчас я пока обучаюсь в лучшей, на мой взгляд, онлайн-школе на рынке IT-профессий', ', но это ведь не повод ' +
@@ -192,8 +192,8 @@ $(document).ready(function () {
         'а также высокий уровень и качество выполненной работы.', 'Прайс-лист', '1 час работы ~ 10$', 'Элемент / задание',
             'Срок исполнения', 'Стоимость', '2023 © Все права защищены'],
         ['beautiful page', 'successful start of your business', 'About me', 'Abilities and skills', 'Completed projects',
-            'Clients and partners', 'Acceptable price', 'I\'m available', 'Project search...', 'Aliaksei Baronin', 'frontend developer / 42 years old, Belarus',
-            'Hello!', 'Let\'s get acquainted! I\'m Aleksey, a beginner frontend developer.',
+            'Clients and partners', 'Acceptable price', 'I\'m available', 'Aliaksei Baronin', 'frontend developer / 42 years old, Belarus',
+            'I\'m ', 'Hello!', 'Let\'s get acquainted! I\'m Aleksey, a beginner frontend developer.',
             'Web development is pretty hard stuff, as it might seem at first glance - sort of like a picture there,' +
             'text here, button here...', 'Not at all... it\'s not like that at all. Nevertheless, the WEB is very interesting and multifaceted.',
             'Yes, now I\'m currently studying at the best, in my opinion, online school in the IT professions market', ', but that\'s not a reason' +
@@ -226,6 +226,7 @@ $(document).ready(function () {
             for (let i = 0; i < placeForLang.length; i++) {
                 placeForLang.eq(i).text(`${allText[0][i]}`);
             }
+            searchInput.attr('placeholder', 'Поиск проекта ...');
         }
         if (str === 'en') {
             // changeTyped('en');
@@ -237,6 +238,7 @@ $(document).ready(function () {
             for (let i = 0; i < placeForLang.length; i++) {
                 placeForLang.eq(i).text(`${allText[1][i]}`);
             }
+            searchInput.attr('placeholder',  'Project search...');
         }
     }
 
