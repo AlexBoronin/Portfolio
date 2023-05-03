@@ -358,7 +358,7 @@
 
 .works__item:hover .works__item_img{
   box-shadow: 0 0 12px 3px rgb(244 239 239);
-  transform: scale(1.05, 1.05);
+  transform: scale(1.02, 1.02);
 }
 
 .content__item#party {
