@@ -322,4 +322,9 @@ $(document).ready(function () {
     //         document.body.style.background = "url(" + img.src + ") no-repeat center";
     //     };
     // }
+
+
+
+
+    /*ToDo - поиск похожего проекта по названию */
 });
