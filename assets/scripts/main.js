@@ -69,10 +69,11 @@ $(document).ready(function () {
 
     /* Кнопки пагинации*/
     const moveNext = () => {
-        removeActive();
+
         if (count === 4) {
             return false
         }
+        removeActive();
         count += 1;
         switch (count) {
             case 1:
@@ -101,10 +102,10 @@ $(document).ready(function () {
         console.log(count)
     }
     const movePrev = () => {
-        removeActive();
         if (count === 0) {
             return false
         }
+        removeActive();
         count -= 1;
         switch (count) {
             case 3:
