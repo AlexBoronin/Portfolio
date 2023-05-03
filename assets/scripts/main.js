@@ -99,7 +99,6 @@ $(document).ready(function () {
                 // setBg(5);
                 break
         }
-        console.log(count)
     }
     const movePrev = () => {
         if (count === 0) {
@@ -131,7 +130,6 @@ $(document).ready(function () {
                 // setBg(1)
                 break
         }
-        console.log(count)
     }
     btnNext.addEventListener('click', moveNext);
     btnPrev.addEventListener('click', movePrev);
@@ -206,13 +204,23 @@ $(document).ready(function () {
             'Мои завершенные проекты',
 
             'Клиентам и партнерам',
-            'Буду рад сотрудничеству или партнерству с другими разработчиками и веб-студиями по направлению web-разработки ' +
-            'на взаимовыгодных условиях и в долгосрочной перспективе.',
-            'Если Вы завалены заказами от клиентов и Вам не хочется их терять, но у Вас не хватает сил и времени, есть решение ' +
-            '- Вы можете запросто обратиться ко мне, я с удовольствием окажу Вам квалифицированную помощь в пределах своих знаний и умений.',
-            'Заинтересован в сотрудничестве со стартап-командами. С радостью рассмотрю предложения в данном направлении.',
-            'Открыт к обсуждению любых производственных и коммерческих вопросов.',
-            'Гарантирую порядочное и надежное партнерство, а также высокий уровень и качество выполненной работы.',
+            'Я ценю Ваше время и Ваши средства',
+            'Уважаемые Клиенты, предлагая Вам свои услуги, я могу гарантировать добросовестное отношение к выполнению ' +
+            'заказа: соблюдение оговоренным сроков и качество выполненной работы.',
+            'Обращаясь за моими услугами Вы получите комфортное сотрудничество и итоговый конкурентно-способный продукт, ' +
+            'не уступающий по качеству (внешний вид, функциональность, интерактивность) Вашим предполагаемым конкурентам, ' +
+            'что благоприятно отразится на Вашем бизнесе.',
+            'Партнерство - это важно',
+            'Коллеги по web-разработке, а также стартап-проекты, готов предложить Вам свои услуги, а в долгосрочной ' +
+            'перспективе и партнерство на постоянной основе.',
+            'Порой говорят "не хватает рук". Если вы столкнулись с такой ситуацией, то я с радостью рассмотрю Ваши ' +
+            'предложения по взаимовыгодному сотрудничеству. Могу заверить, что мои знания и в некоторой степени опыт, ' +
+            'в совокупности с трудолюбием, поспособствуют нашему плодотворному совместному труду. Я всегда открыт к ' +
+            'общению и обсуждению любых коммерческих и производственных вопросов, которые могут возникнуть в процессе ' +
+            'нашей совместной деятельности.',
+            'Все обсуждаемо и решаемо',
+            'Порядочное сотрудничество и надежное партнерство = успешный ',
+            'СТАРТ', ' = успешный ', 'ПРОЕКТ', ' = успешный ', 'БИЗНЕС',
 
             'Прайс-лист',
             '1 час работы ~ 10$', 'Элемент / задание', 'Срок исполнения', 'Стоимость',
@@ -257,14 +265,23 @@ $(document).ready(function () {
             'My completed projects',
 
             'Clients and partners',
-            'I would be glad to cooperate or partner with others developers and web studios in the direction of web development ' +
-            'on mutually beneficial terms and in the long term.',
-            'If you are inundated with orders from customers and you do not want to lose them, but you do not have enough ' +
-            'time and energy, there is a solution - You can easily contact me, I will be happy to provide you with qualified ' +
-            'assistance within the limits of my knowledge and skills.',
-            'I\'m interested in collaborating with start-up teams. I will gladly consider proposals in this direction.',
-            'I am open to discussion of any production and commercial issues.', 'I guarantee a decent and reliable partnership, ' +
-        'as well as the high level and quality of the work performed.',
+            'I appreciate your time and your means',
+            'Dear Clients, offering you my services, I can guarantee a conscientious attitude to the implementation' +
+            'order: compliance with the agreed deadlines and the quality of the work performed.',
+            'When applying for my services, you will receive comfortable cooperation and the final competitive product,' +
+            'as good as the quality (appearance, functionality, interactivity) of your prospective competitors, ' +
+            'which will be good for your business.',
+            'Partnership is important',
+            'Colleagues in web development, as well as startup projects, are ready to offer you their services, and ' +
+            'in the long term perspective and partnership on an ongoing basis.',
+            'Sometimes they say "not enough hands." If you are faced with such a situation, then I will gladly consider ' +
+            'your proposals for mutually beneficial cooperation. I can assure you that my knowledge and to some extent ' +
+            'experience, together with industriousness, will contribute to our fruitful joint work. I\'m always open to ' +
+            'communication and discussion of any commercial and production issues that may arise in the process' +
+            'our joint activities.',
+            'Everything is discussed and decided',
+            'Decent cooperation and reliable partnership = successful ',
+            'START', ' = successful ', 'PROJECT', ' = successful ', 'BUSINESS',
 
             'Price list',
             '1 hour of work ~ 10$', 'Element / task', 'Due date', 'Cost',

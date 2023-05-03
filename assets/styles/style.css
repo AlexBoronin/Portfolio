@@ -169,7 +169,7 @@
   position: relative;
   width: 100%;
   transition: all 1s ease-in-out;
-  transform: translateX(0)
+  transform: translateX(0);
 }
 
 .content__item {
@@ -236,6 +236,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  max-height: 90%;
 }
 
 .skills__title {
@@ -264,8 +265,9 @@
 
 .content__item_skills {
   display: grid;
+  width: 95%;
   grid-template-columns: repeat(4, 20%);
-  gap: 50px;
+  gap: 5%;
   justify-content: center;
 }
 
@@ -278,7 +280,7 @@
 }
 
 .skills__item_image {
-  width: 70%;
+  width: 60%;
 }
 
 .skills__item_img {
@@ -292,19 +294,25 @@
   margin: 5% 0;
   display: flex;
   align-items: start;
+  transition: all .5s linear;
+}
+
+.skills__desc:hover {
+  color: rgb(239, 239, 245);
 }
 
 .skills__more {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   text-decoration: none;
-  width: 50%;
-  height: 20px;
-  padding: 5px;
-  border-radius: 10px;
+  width: 30%;
+  height: 30px;
+  padding: 5px 0;
+  border-radius: 15px;
   color: rgb(155, 155, 155);
   transition: all .5s ease-in-out;
+  font-size: 1.2vb;
 }
 
 .skills__more:hover {
@@ -342,7 +350,6 @@
   padding-left: 30px;
   margin-bottom: 20px;
   transition: all .3s ease-in-out;
-
 }
 
 .works__item_image {
@@ -361,50 +368,56 @@
   transform: scale(1.02, 1.02);
 }
 
-.content__item#party {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-}
 
 .party__title {
   margin-bottom: 100px;
+  text-align: center;
 }
 
 .party__items {
   display: grid;
-  grid-template-columns: 25% 25% 25%;
-  gap: 30px;
+  grid-template-columns: 45% 45%;
+  gap: 20px;
   margin-bottom: 100px;
   justify-content: space-around;
 }
 
-.party__item {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  align-content: start;
+.party__item_image {
+  max-width: 10vb;
+  display: inline-block;
 }
 
-.party__item_image {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 50px;
+.party__item_image:first-child {
+  float: left;
+  margin: 0 2vb 1vb 0;
 }
+
 .party__item_img {
   width: 100%;
 }
 
 .party__item_text {
-  font-size: 2vb;
+  display: inline;
+  font-size: 2vh;
   text-align: justify;
+}
+
+.party__item_text-title {
+  margin-bottom: 30px;
+  font-size: 2.5vb;
+}
+
+.party__item_text p:last-child {
+  margin-top: 20px;
 }
 
 .party__desc {
   font-size: 3vb;
   color: rgb(164, 164, 164);
-  text-align: center;
+}
+
+.orange {
+  color: rgb(248, 187, 134);
 }
 
 .price__title {
@@ -440,7 +453,6 @@ td {
 }
 
 
-
 .table__head-first {
   background: rgb(87, 60, 60);
   font-size: 4vb;
@@ -458,9 +470,6 @@ td {
   font-size: 2vb;
 }
 
-
-
-
 .footer {
   display: flex;
   justify-content: end;
@@ -477,11 +486,6 @@ td {
   border-bottom: 1px solid rgb(87, 60, 60);
   height: 5%;
 }
-
-
-
-
-
 
 .sidebar {
   display: flex;
