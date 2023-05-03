@@ -27,35 +27,35 @@ $(document).ready(function () {
                 contentItems.css('transform', 'translateX(0)');
                 btnPrev.classList.add('disabled');
                 btnNext.classList.remove('disabled');
-                body.css('background', 'url("../images/back_1.jpg") no-repeat center');
+                // body.css('background', 'url("../images/back_1.jpg") no-repeat center');
                 count = 0;
                 break
             case 'skills-item':
                 contentItems.css('transform', 'translateX(-100%)');
                 btnPrev.classList.remove('disabled');
                 btnNext.classList.remove('disabled');
-                body.css('background', 'url("../images/back_2.jpg") no-repeat center');
+                // body.css('background', 'url("../images/back_2.jpg") no-repeat center');
                 count = 1;
                 break
             case 'works-item':
                 contentItems.css('transform', 'translateX(-200%)');
                 btnPrev.classList.remove('disabled');
                 btnNext.classList.remove('disabled');
-                body.css('background', 'url("../images/back_3.jpg") no-repeat center');
+                // body.css('background', 'url("../images/back_3.jpg") no-repeat center');
                 count = 2;
                 break
             case 'party-item':
                 contentItems.css('transform', 'translateX(-300%)');
                 btnPrev.classList.remove('disabled');
                 btnNext.classList.remove('disabled');
-                body.css('background', 'url("../images/back_4.jpg") no-repeat center');
+                // body.css('background', 'url("../images/back_4.jpg") no-repeat center');
                 count = 3;
                 break
             case 'price-item':
                 contentItems.css('transform', 'translateX(-400%)');
                 btnNext.classList.add('disabled');
                 btnPrev.classList.remove('disabled');
-                body.css('background', 'url("../images/back_5.jpg") no-repeat center');
+                // body.css('background', 'url("../images/back_5.jpg") no-repeat center');
                 count = 4;
                 break
         }
