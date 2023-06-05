@@ -262,7 +262,7 @@ $(document).ready(function () {
             'BEM (Block-Element-Modifier) is a web development methodology, as well as a set of interface libraries, frameworks and auxiliary tools.',
             'Git is a distributed version control system.',
 
-            'My completed projects',
+            'My projects',
 
             'Clients and partners',
             'I appreciate your time and your means',
